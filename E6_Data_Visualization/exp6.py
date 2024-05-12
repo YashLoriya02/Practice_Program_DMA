@@ -26,31 +26,13 @@ plt.title("Simple Plot")
 plt.legend()
 plt.show()
 
-# Simpleplot
-t = np.arange(0., 5., 0.2)
-plt.plot(t, t, 'r--', t, t*2, 'bs', t, t*3, 'g^')
-plt.show()
-
-# Subplot
-fig = plt.figure()
-ax1 = fig.add_subplot(2, 2, 1)
-ax2 = fig.add_subplot(2, 2, 2)
-ax3 = fig.add_subplot(2, 2, 3)
-ax4 = fig.add_subplot(2, 2, 4)
-plt.show()
-
-# Traditional Lineplot
-x4 = range(1, 5)
-plt.plot(x4, [xi*1.5 for xi in x4],'r')
-plt.plot(x4, [xi*3 for xi in x4],'b')
-plt.plot(x4, [xi/3.0 for xi in x4],'g')
-plt.show()
-
-# Lineplot of dots
-ax = plt.axes()
-x7 = np.linspace(0, 10, 30)
-y7 = np.sin(x7)
-plt.plot(x7, y7, 'o', color = 'black')
+# Scatter Plot
+x_scatter = np.random.randn(100)
+y_scatter = np.random.randn(100)
+plt.scatter(x_scatter, y_scatter)
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt.title('Scatter Plot')
 plt.show()
 
 # Histogram
@@ -61,26 +43,6 @@ plt.show()
 # Barplot
 data2 = [5. , 25. , 50. , 20.]
 plt.bar(range(len(data2)), data2)
-plt.show()
-
-# Horizontal Barplot
-data2 = [5. , 25. , 50. , 20.]
-plt.barh(range(len(data2)), data2)
-plt.show()
-
-# Errorbar
-x9 = np.arange(0, 4, 0.2)
-y9 = np.exp(-x9)
-e1 = 0.1 * np.abs(np.random.randn(len(y9)))
-plt.errorbar(x9, y9, yerr = e1, fmt = '.-')
-plt.show()
-
-# Barplot with 2 colors
-A = [15., 30., 45., 22.]
-B = [15., 25., 50., 20.]
-z2 = range(4)
-plt.bar(z2, A, color = 'b')
-plt.bar(z2, B, color = 'r', bottom = A)
 plt.show()
 
 # Piechart
@@ -99,11 +61,4 @@ plt.show()
 x15 = np.arange(1, 5)
 plt.plot(x15, x15*1.5, x15, x15*3.0, x15, x15/3.0)
 plt.grid(True)
-plt.show()
-
-# Plot with ticks
-u = [5, 4, 9, 7, 8, 9, 6, 5, 7, 8]
-plt.plot(u)
-plt.xticks([2, 4, 6, 8, 10])
-plt.yticks([2, 4, 6, 8, 10])
 plt.show()
