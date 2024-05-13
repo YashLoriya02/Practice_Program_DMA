@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-df = pd.read_csv("age_bmi.csv")
+df = pd.read_csv("5_age_bmi.csv")
 
 q1 = np.percentile(df["Age"], 25)
 q3 = np.percentile(df["Age"], 75)
